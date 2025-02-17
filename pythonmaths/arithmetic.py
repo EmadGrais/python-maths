@@ -52,7 +52,10 @@ def divide(x: int | float, y: int | float) -> float:
     >>> arithmetic.divide(5, 2)
         2.5
     """
-    return x / y
+    try:
+        return x / y
+    except e:
+        raise e
 
 
 def multiply(x: int | float, y: int | float) -> float:

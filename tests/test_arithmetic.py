@@ -64,3 +64,9 @@ def test_multiply(x: int | float, y: int | float, expected: int | float) -> None
 def test_divide(x: int | float, y: int | float, expected: int | float) -> None:
     """Test the divide function."""
     assert arithmetic.divide(x, y) == pytest.approx(expected)
+
+
+def test_zero_divide_error():
+    """Test divide by zero raises an exception"""
+    with pytest.raises(Exception) as e_info:
+        arithmetic.divide(5,0)
